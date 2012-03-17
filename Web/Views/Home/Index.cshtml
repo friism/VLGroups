@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Core.Model.Batch>
+
+@{
+	ViewBag.Title = "Batches";
+}
+
+<h2>View1</h2>
+<ul>
+	@foreach (var batch in Model)
+	{
+		<li>@Html.ActionLink(batch.FetchedAt.ToString("MMMM dd yyyy"), "Index", "Member", new { batchId = batch.BatchId }, null)</li>
+	}
+</ul>
